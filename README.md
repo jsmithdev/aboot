@@ -1,8 +1,8 @@
-# aboot (Agent-Bootstrap)
+# aboot
 
 ## What's this aboot?
 
-This is a CLI tool (Rust) that scaffolds projects to quickly give AI coding agents an effective, repeatable agile workflow.
+Short for Agent-Bootstrap, `aboot` is a CLI tool (Rust) that scaffolds projects to quickly give AI coding agents an effective, repeatable agile workflow.
 
 ## Installation
 
@@ -104,10 +104,6 @@ Same flags as `new` minus `--no-git`/`--git-remote`/`--license`. `--stack` defau
 `AGENTS.md`, `CLAUDE.md`, `justfile`, and `.editorconfig` contain aboot-managed regions marked with versioned markers (native comment syntax per file). `aboot update` replaces only those regions — user content outside the markers is preserved — recreates missing managed files, and bumps the version stamp in `.aboot.json`. `--force` re-adopts managed files that lost their markers.
 
 **Lifecycle:** `aboot add` installs the workflow files once — re-running it skips existing files and never refreshes them. After you upgrade aboot, run `aboot update [path]` in each project to re-apply the managed sections in place (your edits outside the markers are preserved). `aboot doctor` flags projects whose template version is older than the one you're running.
-
-**Layout migration (v2):** template v2 moved the cold docs (`REQUIREMENTS.md`, `BACKLOG.md`, `DECISIONS.md`, `PROJECT.md`, `SESSIONS.md`) into the hidden `.aboot/` directory. For projects installed by an older aboot, both `aboot add` and `aboot update` move those root files into `.aboot/` (content preserved, each move reported); projects without a `.aboot.json` manifest are never touched.
-
-**Layout migration (v3):** template v3 moved `BOARD.md` into the hidden `.aboot/` directory, leaving only `AGENTS.md` at the root. For projects installed by an older aboot, both `aboot add` and `aboot update` move the root `BOARD.md` into `.aboot/` (content preserved, move reported); projects without a `.aboot.json` manifest are never touched.
 
 ### Releasing
 

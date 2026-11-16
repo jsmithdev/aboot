@@ -22,3 +22,4 @@
 - 2026-11-15: Template v3 moved `BOARD.md` into `.aboot/`, leaving only `AGENTS.md` at the root — the hot/cold split no longer held because end users touch `REQUIREMENTS.md` too, so every workflow doc now lives in `.aboot/` and the root keeps just the agent entry point; `aboot add`/`update` migrate pre-v3 projects (manifest-gated, content preserved).
 - 2026-11-15: Bumped 0.1.1 → 0.2.0 — the `aboot todo` → `aboot board` CLI rename and the template v2/v3 layout moves are breaking for 0.x users, so a minor bump rather than a patch.
 - 2026-11-15: `aboot status` staleness marker shows only when a manifest exists (a manifest-less project is uninstalled, not stale) and is exposed as `"stale"` in `--json`.
+- 2026-11-15: README dropped the v2/v3 layout-migration paragraphs — nothing was ever released before the `.aboot/` layout, so no external project ever needed migrating; the migration code stays (manifest-gated, tested) as a safety net.

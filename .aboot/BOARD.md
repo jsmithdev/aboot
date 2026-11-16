@@ -4,3 +4,4 @@
 - [x] `aboot status`: show a staleness marker when the manifest version is older than the current template version
 - [x] Undo the last git commit; redo the init commit with everything in one go
 - [x] Create the GitHub repo with `gh`, add `origin`, push
+- [x] README: drop the v2/v3 layout-migration notes (nothing was ever released pre-`.aboot/`)

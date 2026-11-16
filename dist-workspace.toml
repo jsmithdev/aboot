@@ -1,0 +1,8 @@
+[workspace]
+members = ["Cargo.toml"]
+
+[profile.dist]
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = "symbols"

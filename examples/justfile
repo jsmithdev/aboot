@@ -1,0 +1,8 @@
+# aboot:begin file="justfile" version="2"
+# {{name}} — just recipes (https://github.com/casey/just)
+
+default:
+	@just --list
+
+{{justfile_commands}}
+# aboot:end
